@@ -14,6 +14,11 @@ export class AppComponent {
     this.typedText = inputValue;
   }
 
+  onButtonClick() {
+    this.randomText = lorem.sentence();
+    this.typedText = '';
+  }
+
   getClassName(index: number): string {
     if (index >= this.typedText.length) {
       return 'pending';
