@@ -13,4 +13,12 @@ export class AppComponent {
   onTextInput(inputValue: string) {
     this.typedText = inputValue;
   }
+
+  getClassName(index: number): string {
+    if (index >= this.typedText.length) {
+      return 'pending';
+    }
+
+    return this.randomText[index] === this.typedText[index] ? 'correct' : 'incorrect';
+  }
 }
