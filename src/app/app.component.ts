@@ -8,4 +8,9 @@ import { lorem } from 'faker';
 })
 export class AppComponent {
   randomText: string = lorem.sentence();
+  typedText: string = '';
+
+  onTextInput(inputValue: string) {
+    this.typedText = inputValue;
+  }
 }
